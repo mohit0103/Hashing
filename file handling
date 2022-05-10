@@ -1,0 +1,24 @@
+#include<iostream>
+#include <fstream>
+using namespace std;
+int main(){
+     char arr[100];
+     cout<<"enter name and age";
+     cin.getline(arr,100);
+
+     ofstream myfile("xyz.txt");
+     myfile<<arr;
+     myfile.close();
+     cout<<"file write operation performed successfully"<<endl<<endl;
+
+    cout<<"reading started"<<endl;
+    char arr1[100];
+    ifstream obj("xyz.txt");
+    obj.getline(arr,100);
+    cout<<"array content: "<<arr1;
+    cout<<"file read completed"<<endl;
+    obj.close();
+
+
+return 0;
+}
